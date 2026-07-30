@@ -41,7 +41,10 @@ public class TestBase {
 
         Configuration.timeout = 10000;
 
-        String remoteUrl = System.getProperty("remoteUrl");
+        String remoteUrl = System.getProperty(
+                "remoteUrl",
+                "https://user1:1234@selenoid.autotests.cloud/wd/hub"
+        );
 
         if (remoteUrl != null && !remoteUrl.isBlank()) {
             Configuration.remote = remoteUrl;
