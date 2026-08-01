@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import pages.components.CatalogComponent;
 
 import java.time.Duration;
 
@@ -9,15 +10,10 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
+    CatalogComponent catalog = new CatalogComponent();
+
     private final SelenideElement confirmCityButton =
             $$("button").findBy(text("Да, я здесь"));
-
-    private final SelenideElement catalogButton =
-            $("[data-testid-button-header='catalog']");
-
-    private final SelenideElement booksCategory =
-            $$("[data-testid-button-catalog-menu-category='label']")
-                    .findBy(exactText("Книги"));
 
     private final SelenideElement searchInput =
             $("#app-search");
@@ -39,20 +35,13 @@ public class MainPage {
 
     @Step("Open the catalog")
     public MainPage openCatalog() {
-        catalogButton
-                .shouldBe(visible)
-                .shouldBe(enabled)
-                .click();
-
+        catalog.openCatalog();
         return this;
     }
 
     @Step("Check that the catalog is opened")
     public MainPage checkCatalogIsVisible() {
-        booksCategory
-                .shouldBe(visible)
-                .shouldHave(exactText("Книги"));
-
+        catalog.checkCatalogIsVisible();
         return this;
     }
 

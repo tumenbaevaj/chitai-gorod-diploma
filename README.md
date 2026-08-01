@@ -1,18 +1,26 @@
 # UI Autotests for Chitai-Gorod
 
-Проект UI-автотестов для сайта интернет-магазина [«Читай-город»](https://www.chitai-gorod.ru/).
+<p align="center">
+  <a href="https://www.chitai-gorod.ru/">
+    <img src="media/logo.jpg"
+         alt="Chitai-Gorod logo"
+         width="150">
+  </a>
+</p>
 
-## Проверяемая функциональность
+This project is designed to automate UI testing of the [Chitai-Gorod](https://www.chitai-gorod.ru/) online bookstore.
 
-В проекте реализовано 5 UI-автотестов:
+## Test Coverage
 
-- успешное открытие главной страницы;
-- открытие каталога;
-- ввод названия книги в поле поиска;
-- поиск автора «Чингиз Айтматов»;
-- поиск книги «Белый пароход».
+The project includes five automated UI tests:
 
-## Используемые технологии
+- opening the home page;
+- opening the catalog;
+- entering a book title in the search field;
+- searching for the author “Чингиз Айтматов”;
+- searching for the book “Белый пароход”.
+
+## Technologies
 
 <p align="center">
   <img width="55" title="IntelliJ IDEA" alt="IntelliJ IDEA"
@@ -40,21 +48,21 @@
   <img src="https://img.shields.io/badge/Allure_TestOps-8A2BE2?style=for-the-badge">
 </p>
 
-## Запуск тестов
+## Running the Tests
 
-Для локального запуска тестов в Windows используется команда:
+The following command is used to run the tests locally on Windows:
 
 ```powershell
 .\gradlew clean test
 ```
 
-## Удалённый запуск в Jenkins
+## Remote Test Execution in Jenkins
 
-Тесты запускаются в Jenkins с использованием Selenoid.
+Selenoid is used for remote test execution in Jenkins.
 
-### [Открыть Jenkins Job](https://jenkins.qa.guru/view/java-students/job/hw_14_chitai_gorod/)
+### [Open Jenkins Job](https://jenkins.qa.guru/view/java-students/job/hw_14_chitai_gorod/)
 
-Команда запуска в Jenkins:
+The following command is used to run the tests in Jenkins:
 
 ```text
 clean test
@@ -62,42 +70,45 @@ clean test
 
 ![Jenkins Build](media/jenkins.jpg)
 
-## Интеграции
+## Integrations
 
 ### [Allure Report](https://jenkins.qa.guru/job/hw_14_chitai_gorod/lastSuccessfulBuild/allure/)
 
-В Allure Report отображаются результаты выполнения тестов, шаги, скриншоты, Page Source, логи браузера и видеозаписи прохождения тестов в Selenoid.
+Allure Report displays test execution results, test steps, screenshots, page source, browser console logs, 
+and videos of test execution in Selenoid.
 
 ![Allure Report](media/allure-report.jpg)
 
 ### [Allure TestOps](https://allure.autotests.cloud/project/5302/dashboards)
 
-Результаты выполнения тестов из Jenkins передаются в Allure TestOps.
+Test execution results are sent from Jenkins to Allure TestOps.
 
-В Allure TestOps отображаются автоматизированные тест-кейсы, история запусков и статистика выполнения тестов.
+Allure TestOps displays automated test cases, launch history, execution results, and test automation statistics.
+
 
 ![Allure TestOps](media/allure-testops.jpg)
 
-Пример запуска с выполненными тестами, шагами и связью с Jira:
+An example of an Allure TestOps launch with executed tests, test steps, and Jira integration is shown below:
 
 ![Allure TestOps Launch](media/allure-testops-launch.jpg)
 
 ### [Jira](https://jira.qa.guru/browse/REF-13)
 
-Для проекта создана задача:
+The following Jira issue was created for the project:
 
 **REF-13 — UI autotests for Chitai-Gorod website**
 
-Задача Jira связана с автоматизированными тест-кейсами и запуском в Allure TestOps.
+The Jira issue is linked to the automated test cases and the Allure TestOps launch.
 
 ![Jira Integration](media/jira.jpg)
 
-## Telegram-уведомления
+## Telegram Notifications
 
-После завершения сборки Jenkins отправляет в Telegram уведомление с результатами выполнения тестов и ссылкой на Allure Report.
+After the Jenkins build is completed, a Telegram notification with the test execution results and a link to the 
+Allure Report is sent as shown below:
 
 ![Telegram Notification](media/telegram.jpg)
 
-## Репозиторий
+## Repository
 
 ### [GitHub Repository](https://github.com/tumenbaevaj/full_project)
