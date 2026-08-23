@@ -12,13 +12,15 @@ This project is designed to automate UI testing of the [Chitai-Gorod](https://ww
 
 ## Test Coverage
 
-The project includes five automated UI tests:
+The project includes seven automated UI test cases:
 
 - opening the home page;
 - opening the catalog;
 - entering a book title in the search field;
 - searching for the author “Чингиз Айтматов”;
-- searching for the book “Белый пароход”.
+- searching for the book “Белый пароход”;
+- searching for the book “Джамиля” using a parameterized test;
+- searching for the book “Плаха” using a parameterized test.
 
 ## Technologies
 

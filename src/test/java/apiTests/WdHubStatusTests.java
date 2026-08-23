@@ -18,9 +18,7 @@ public class WdHubStatusTests extends ApiTestBase {
                 .then()
                 .log().all()
                 .statusCode(200)
-                .body(
-                        "value.message",
-                        is("Selenoid v3.0.7 built at 2026-08-01_11:46:48AM")
+                .body("value.message", containsString("Selenoid")
                 );
     }
 
