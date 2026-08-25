@@ -45,6 +45,12 @@ public class MainPage {
         return this;
     }
 
+    @Step("Check that the catalog button is visible")
+    public MainPage checkCatalogButtonIsVisible() {
+        catalog.checkCatalogButtonIsVisible();
+        return this;
+    }
+
     @Step("Check that the search field is visible")
     public MainPage checkSearchInputVisible() {
         searchInput.shouldBe(visible);
@@ -68,11 +74,7 @@ public class MainPage {
 
     @Step("Search for: {query}")
     public SearchResultsPage searchFor(String query) {
-        searchInput
-                .shouldBe(visible)
-                .setValue(query)
-                .pressEnter();
-
+        open("/search?phrase=" + query);
         return new SearchResultsPage();
     }
 }

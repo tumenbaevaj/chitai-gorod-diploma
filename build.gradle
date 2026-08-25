@@ -35,9 +35,7 @@ dependencies {
             'net.datafaker:datafaker:2.5.4',
             'org.junit.jupiter:junit-jupiter',
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "org.slf4j:slf4j-simple:$slf4jVersion",
-            "io.rest-assured:rest-assured:6.0.0",
-            "io.rest-assured:json-schema-validator:6.0.0"
+            "org.slf4j:slf4j-simple:$slf4jVersion"
     )
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

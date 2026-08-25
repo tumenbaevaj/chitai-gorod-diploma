@@ -12,4 +12,10 @@ public class SearchResultsPage {
         $("body").shouldHave(text(expectedText));
         return this;
     }
+
+    @Step("Check that no search results were found")
+    public SearchResultsPage checkNoResultsFound() {
+        $("body").shouldHave(text("не принес результатов"));
+        return this;
+    }
 }
