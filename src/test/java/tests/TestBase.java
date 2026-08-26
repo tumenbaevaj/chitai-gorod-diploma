@@ -42,25 +42,17 @@ public class TestBase {
 
         Configuration.timeout = 10000;
 
-        String remoteUrl = System.getProperty(
-                "remoteUrl",
-                "https://user1:1234@selenoid.autotests.cloud/wd/hub"
+        Configuration.remote = System.getProperty("remoteUrl");
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(
+                "selenoid:options",
+                Map.<String, Object>of(
+                        "enableVNC", true,
+                        "enableVideo", true
+                )
         );
-
-        if (remoteUrl != null && !remoteUrl.isBlank()) {
-            Configuration.remote = remoteUrl;
-
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability(
-                    "selenoid:options",
-                    Map.<String, Object>of(
-                            "enableVNC", true,
-                            "enableVideo", true
-                    )
-            );
-
-            Configuration.browserCapabilities = capabilities;
-        }
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
