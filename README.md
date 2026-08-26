@@ -12,7 +12,7 @@ This project is designed to automate UI testing of the [Chitai-Gorod](https://ww
 
 ## Test Coverage
 
-The project includes 8 automated UI test methods with 9 test executions:
+The project includes **8 automated UI test methods with 9 test executions**:
 
 - opening the home page;
 - checking that the catalog button is visible;
@@ -71,37 +71,56 @@ The following command is used to run the tests locally on Windows:
 
 ## Remote Test Execution in Jenkins
 
-Selenoid is used for remote test execution in Jenkins.
+The project is configured for **parameterized remote test execution in Jenkins using Selenoid**.
 
 ### [Open Jenkins Job](https://jenkins.qa.guru/job/chitai-gorod-diploma/)
 
-The following command is used to run the tests in Jenkins:
+The following parameters can be selected before the build:
 
-```text
-clean test
-```
+
+![Jenkins Parameters](media/parameters.jpg)
+
+The tests are executed in Jenkins using Gradle with parameters passed as system properties.
+
+An example of a successful Jenkins build:
 
 ![Jenkins Build](media/jenkins.jpg)
 
 ## Integrations
 
-### [Allure Report](https://jenkins.qa.guru/job/chitai-gorod-diploma/14/allure/#)
+### [Allure Report](https://jenkins.qa.guru/job/chitai-gorod-diploma/lastSuccessfulBuild/allure/)
 
-Allure Report displays test execution results, test steps, screenshots, page source, browser console logs,
-and videos of test execution in Selenoid.
+Allure Report is used to visualize test execution results.
+
+The report contains:
+
+- test execution status;
+- test steps;
+- screenshots;
+- page source;
+- browser console logs;
+- videos of test execution in Selenoid;
+- execution history.
 
 ![Allure Report](media/allure-report.jpg)
 
 ### [Allure TestOps](https://allure.qa.guru/project/5302/dashboards)
 
-Test execution results are sent from Jenkins to Allure TestOps.
+Test execution results are sent automatically from Jenkins to **Allure TestOps**.
 
-Allure TestOps displays automated and manual test cases, launch history, execution results,
-test steps, and test automation statistics.
+Allure TestOps is used for:
+
+- automated test case management;
+- manual test case management;
+- launch history;
+- execution results;
+- test steps;
+- test automation statistics;
+- Jira integration.
 
 ![Allure TestOps](media/allure-testops.jpg)
 
-An example of an Allure TestOps launch with executed automated tests, test steps, and Jira integration is shown below:
+An example of an Allure TestOps launch with executed automated tests, test steps and Jira integration:
 
 ![Allure TestOps Launch](media/allure-testops-launch.jpg)
 
@@ -111,8 +130,7 @@ The following Jira issue was created for the project:
 
 **MUL-13 — UI autotests for Chitai-Gorod website**
 
-The Jira issue describes the UI automation project and its integrations with Jenkins, Selenoid,
-Allure Report, and Allure TestOps.
+The Jira issue describes the UI automation project and its integrations with Jenkins, Selenoid, Allure Report and Allure TestOps.
 
 ![Jira Integration](media/jira.jpg)
 
