@@ -36,29 +36,67 @@ The project also includes manual test cases in Allure TestOps covering:
 ## Technologies
 
 <p align="center">
-  <img width="55" title="IntelliJ IDEA" alt="IntelliJ IDEA"
-       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg">
-  <img width="55" title="Java" alt="Java"
-       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
-  <img width="55" title="Gradle" alt="Gradle"
-       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg">
-  <img width="55" title="JUnit 5" alt="JUnit 5"
-       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg">
-  <img width="55" title="GitHub" alt="GitHub"
-       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg">
-  <img width="55" title="Jenkins" alt="Jenkins"
-       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg">
-  <img width="55" title="Jira" alt="Jira"
-       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg">
-  <img width="55" title="Telegram" alt="Telegram"
-       src="https://cdn.simpleicons.org/telegram/26A5E4">
+
+  <a href="https://www.jetbrains.com/idea/">
+    <img width="55" title="IntelliJ IDEA" alt="IntelliJ IDEA"
+         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg">
+  </a>
+
+  <a href="https://www.java.com/">
+    <img width="55" title="Java" alt="Java"
+         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
+  </a>
+
+  <a href="https://gradle.org/">
+    <img width="55" title="Gradle" alt="Gradle"
+         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg">
+  </a>
+
+  <a href="https://junit.org/junit5/">
+    <img width="55" title="JUnit 5" alt="JUnit 5"
+         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg">
+  </a>
+
+  <a href="https://github.com/">
+    <img width="55" title="GitHub" alt="GitHub"
+         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg">
+  </a>
+
+  <a href="https://www.jenkins.io/">
+    <img width="55" title="Jenkins" alt="Jenkins"
+         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg">
+  </a>
+
+  <a href="https://www.atlassian.com/software/jira">
+    <img width="55" title="Jira" alt="Jira"
+         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg">
+  </a>
+
+  <a href="https://telegram.org/">
+    <img width="55" title="Telegram" alt="Telegram"
+         src="https://cdn.simpleicons.org/telegram/26A5E4">
+  </a>
+
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Selenide-46A834?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Selenoid-00AEEF?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Allure_Report-F4A261?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Allure_TestOps-8A2BE2?style=for-the-badge">
+
+  <a href="https://selenide.org/">
+    <img src="https://img.shields.io/badge/Selenide-46A834?style=for-the-badge">
+  </a>
+
+  <a href="https://aerokube.com/selenoid/latest/">
+    <img src="https://img.shields.io/badge/Selenoid-00AEEF?style=for-the-badge">
+  </a>
+
+  <a href="https://allurereport.org/">
+    <img src="https://img.shields.io/badge/Allure_Report-F4A261?style=for-the-badge">
+  </a>
+
+  <a href="https://qameta.io/allure-testops/">
+    <img src="https://img.shields.io/badge/Allure_TestOps-8A2BE2?style=for-the-badge">
+  </a>
+
 </p>
 
 ## Running the Tests
@@ -71,13 +109,12 @@ The following command is used to run the tests locally on Windows:
 
 ## Remote Test Execution in Jenkins
 
-The project is configured for **parameterized remote test execution in Jenkins using Selenoid**.
+The project is configured for **parameterized remote test execution in Jenkins using Selenoid**. Browser, browser size, base URL and other execution parameters can be configured before the build.
 
 ### [Open Jenkins Job](https://jenkins.qa.guru/job/chitai-gorod-diploma/)
 
 The following parameters can be selected before the build:
-
-
+    
 ![Jenkins Parameters](media/parameters.jpg)
 
 The tests are executed in Jenkins using Gradle with parameters passed as system properties.
@@ -85,6 +122,12 @@ The tests are executed in Jenkins using Gradle with parameters passed as system 
 An example of a successful Jenkins build:
 
 ![Jenkins Build](media/jenkins.jpg)
+
+## Test Execution Video
+
+An example of the **Catalog should open successfully** UI test execution in Selenoid:
+
+[Watch test video](media/test-execution.mp4)
 
 ## Integrations
 
@@ -136,9 +179,23 @@ The Jira issue describes the UI automation project and its integrations with Jen
 
 ## Telegram Notifications
 
-Telegram notifications are configured to send test execution results and a link to the Allure Report after the Jenkins build.
+Telegram notifications are automatically sent after the Jenkins build.
 
-Due to network restrictions in the Jenkins environment, connection to the Telegram API may be unavailable.
+The notification contains:
+
+- test execution status;
+- total number of test scenarios;
+- number of passed tests;
+- test suite statistics;
+- execution duration.
+
+An example of a successful UI test execution notification:
+
+<p align="center">
+  <img src="media/telegram.jpg"
+       alt="Telegram Notification"
+       width="350">
+</p>
 
 ## Repository
 
