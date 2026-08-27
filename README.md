@@ -123,12 +123,6 @@ An example of a successful Jenkins build:
 
 ![Jenkins Build](media/jenkins.jpg)
 
-## Test Execution Video
-
-An example of the **Catalog should open successfully** test execution in Selenoid:
-
-[Watch test video](media/test-execution.mp4)
-
 ## Integrations
 
 ### [Allure Report](https://jenkins.qa.guru/job/chitai-gorod-diploma/lastSuccessfulBuild/allure/)
@@ -146,6 +140,16 @@ The report contains:
 - execution history.
 
 ![Allure Report](media/allure-report.jpg)
+
+## Test Execution Video
+
+An example of the **Catalog should open successfully** test execution in Selenoid:
+
+<p align="center">
+  <img src="media/test-execution.gif"
+       alt="Test Execution Video"
+       width="800">
+</p>
 
 ### [Allure TestOps](https://allure.qa.guru/project/5302/dashboards)
 
