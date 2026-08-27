@@ -114,7 +114,7 @@ The project is configured for **parameterized remote test execution in Jenkins u
 ### [Open Jenkins Job](https://jenkins.qa.guru/job/chitai-gorod-diploma/)
 
 The following parameters can be selected before the build:
-    
+
 ![Jenkins Parameters](media/parameters.jpg)
 
 The tests are executed in Jenkins using Gradle with parameters passed as system properties.
@@ -125,7 +125,7 @@ An example of a successful Jenkins build:
 
 ## Test Execution Video
 
-An example of the **Catalog should open successfully** UI test execution in Selenoid:
+An example of the **Catalog should open successfully** test execution in Selenoid:
 
 [Watch test video](media/test-execution.mp4)
 
@@ -149,7 +149,7 @@ The report contains:
 
 ### [Allure TestOps](https://allure.qa.guru/project/5302/dashboards)
 
-Test execution results are sent automatically from Jenkins to **Allure TestOps**.
+Test execution results are sent from Jenkins to **Allure TestOps**, and the Jenkins job can also be launched directly from Allure TestOps.
 
 Allure TestOps is used for:
 
